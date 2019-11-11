@@ -38,7 +38,15 @@ function displayJsonData(fetchedData){
     var ul = document.createElement("UL");
     for(let i = 0; i < fetchedData.length; i++){
         var li = document.createElement("LI");
-        li.innerText = JSON.stringify(fetchedData[i]);
+        li.innerHTML = 
+        "<strong>" + fetchedData[i].id + ":  </strong>" 
+        + "<span>" + fetchedData[i].property1 + "  </span>"
+        + " --- " 
+        + "<span>" + fetchedData[i].property2 + "  </span>"
+        + " --- " 
+        + "<span>" + fetchedData[i].property3 + "  </span>"
+        + "."
+        ;
         ul.appendChild(li);
     }
     document.getElementById("output").appendChild(ul);
