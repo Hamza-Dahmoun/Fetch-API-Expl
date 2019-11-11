@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "property1": "Value 1",
+        "property2": "Value 2",
+        "property3": 1999
+    },
+    {
+        "id": 2,
+        "property1": "Value 1",
+        "property2": "Value 2",
+        "property3": 2000
+    },
+    {
+        "id": 3,
+        "property1": "Value 1",
+        "property2": "Value 2",
+        "property3": 2001
+    }
+]
