@@ -19,3 +19,10 @@ button:hover{
     color:#fff;
     background-color: #cacaca;
 }
+
+#output{
+    border:1px solid #efefef;
+    margin: 5%;
+    padding: 2%;
+    text-align: center;
+}
