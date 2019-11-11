@@ -4,3 +4,18 @@ body{
     justify-content: center;
     padding: 5%;
 }
+
+button{
+    width: auto;margin-left:auto;margin-right: auto;
+    height: 35px;
+    border:1px solid #cacaca;
+    background-color: #efefef;
+    color:#000;
+    cursor:pointer;
+    transition-duration: 0.5s;
+}
+button:hover{
+    transition-duration: 0.5s;
+    color:#fff;
+    background-color: #cacaca;
+}
