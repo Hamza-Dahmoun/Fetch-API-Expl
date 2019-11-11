@@ -26,3 +26,6 @@ button:hover{
     padding: 2%;
     text-align: center;
 }
+#output ul{
+    text-align: left;
+}
