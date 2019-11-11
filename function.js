@@ -26,8 +26,20 @@ function fetchData() {
         //the return statements will return an object that we're going to use in the next 'then' ... so this current 'then' will return a promess
     }).then(ourJsonData => {
         console.log(JSON.stringify(ourJsonData) + " *-*-* and its length is: " + ourJsonData.length);
+        displayJsonData(ourJsonData);
     })
         .catch(error => {
             console.log(error);
         });
+}
+
+function displayJsonData(fetchedData){
+    console.log(fetchedData.length);
+    var ul = document.createElement("UL");
+    for(let i = 0; i < fetchedData.length; i++){
+        var li = document.createElement("LI");
+        li.innerText = JSON.stringify(fetchedData[i]);
+        ul.appendChild(li);
+    }
+    document.getElementById("output").appendChild(ul);
 }
