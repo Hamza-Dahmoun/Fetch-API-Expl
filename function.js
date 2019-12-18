@@ -17,7 +17,7 @@ function fetchData() {
         //referrer: 'no-referrer', // no-referrer, *client
     }).then(res => {
         //so once it finishes fetching it will execute this block of code
-        //1- we'll log the response we've got (just for testing)
+        //1- we'll log the response we've got (just for testing, and read the error we got when we tested it)
         //2- we'll log the response body in a json format (just for testing)
         //3- we'll return the response body in a json format
         console.log(res);
@@ -25,16 +25,16 @@ function fetchData() {
         return res.json();
         //the return statements will return an object that we're going to use in the next 'then' ... so this current 'then' will return a promess
     }).then(ourJsonData => {
-        console.log(JSON.stringify(ourJsonData) + " *-*-* and its length is: " + ourJsonData.length);
+        console.log(JSON.stringify(ourJsonData));
+        console.log(" ----- and its length is: "+ourJsonData.length);
         displayJsonData(ourJsonData);
-    })
-        .catch(error => {
+    }).catch(error => {
             console.log(error);
         });
 }
 
 function displayJsonData(fetchedData){
-    console.log(fetchedData.length);
+    //console.log(fetchedData.length);
     var ul = document.createElement("UL");
     for(let i = 0; i < fetchedData.length; i++){
         var li = document.createElement("LI");
